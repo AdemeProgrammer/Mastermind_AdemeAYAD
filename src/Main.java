@@ -17,8 +17,15 @@ public class Main {
          if (commencerPartie.equals("o")) {
              boolean victoire = false;
              int nbTentatives = 12;
+             String ListeNombre = genererListeNombre();
              while (nbTentatives > 0 || !victoire) {
-
+                 System.out.println("Nombres de tentatives restantes : "+nbTentatives+"(ça se rapproche de la défaite)");
+                 System.out.println("Entrer une suite de nombre (5 nombres entre 1 et 9) :");
+                 String tentativeListeNombre = clavier.nextLine().toUpperCase();
+                 if (!tentativeListeNombre.matches("[1-9]{5}")) {
+                     System.out.println("Erreur : la proposition doit être composée de 5 chiffres distincts entre 1 et 9.");
+                     continue;
+                 }
              }
              if (victoire = true) {
                  System.out.println("Bravo, vous êtes le roi du mastermind !");
