@@ -39,14 +39,18 @@ public class Main {
                  if (bienPlace == 5) {
                      victoire = true;
                  }else{
+                     victoire = false;
                      nbTentatives--;
                  }
+                 if (victoire == true) {
+                     System.out.println("Bravo, vous êtes le roi du mastermind !");
+                     break;
+                 } else if (nbTentatives == 0) {
+                     System.out.println("Désolé mais c'est une défaite... Le bon code était : "+ListeNombre);
+                     break;
+                 }
              }
-             if (victoire = true) {
-                 System.out.println("Bravo, vous êtes le roi du mastermind !");
-             } else if (nbTentatives == 0) {
-                 System.out.println("Nombre de tentatives écoulées !");
-             }
+
          } else {
              System.out.println("Bon bah au revoir !");
          }
