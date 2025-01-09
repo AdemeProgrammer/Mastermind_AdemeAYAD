@@ -14,7 +14,7 @@ public class Main {
          System.out.println("4- La partie se termine lorsque le joueur trouve la séquence secrète ou épuise toutes ses tentatives. ");
          System.out.println("Voulez vous commencer la partie ? (o/n)");
          String commencerPartie = clavier.nextLine().toUpperCase();
-         if (commencerPartie.equals("o")) {
+         if (commencerPartie.equals("O")) {
              boolean victoire = false;
              int nbTentatives = 12;
              String ListeNombre = genererListeNombre();
