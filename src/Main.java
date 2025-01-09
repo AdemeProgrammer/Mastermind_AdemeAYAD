@@ -26,6 +26,21 @@ public class Main {
                      System.out.println("Erreur : la proposition doit être composée de 5 chiffres distincts entre 1 et 9.");
                      continue;
                  }
+                 int bienPlace = 0;
+                 int malPlace = 0;
+                 for (int i = 0; i< 5; i++) {
+                     if(tentativeListeNombre.charAt(i) == ListeNombre.charAt(i)) {
+                         bienPlace ++;
+                     } else if (ListeNombre.contains(String.valueOf(ListeNombre.charAt(i)))) {
+                         malPlace ++;
+                     }
+                 }
+                 System.out.println(bienPlace+" chiffres sont bien placés et "+malPlace+" sont mal placés.");
+                 if (bienPlace == 5) {
+                     victoire = true;
+                 }else{
+                     nbTentatives--;
+                 }
              }
              if (victoire = true) {
                  System.out.println("Bravo, vous êtes le roi du mastermind !");
